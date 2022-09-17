@@ -39,7 +39,7 @@ public class Basics {
          *    (Relevant reading: 1.1.3. Printing things)
          */
         System.out.println(7 + 5);
-        System.out.println("Hello World");
+        System.out.println("Hello World!");
 
 
 
@@ -118,13 +118,7 @@ public class Basics {
      * @return           The first letter of every word in to_split
      */
     public static String split(String to_split) {
-        /* TODO (Task 4): Complete this method body.
-         *                The String methods .split and .charAt may be helpful,
-         *                along with the StringBuilder.append
-         *                You may also assume that to_split always has 7 words
-         *                separated by spaces, so no loops are required, though
-         *                you may use them if you wish.
-         */
+
         StringBuilder ret = new StringBuilder();
         String[] myArray = to_split.split(" ");
 
@@ -165,15 +159,4 @@ public class Basics {
 
         return current_sum;
     }
-
-
-    /*
-     * TODO (Task 6): Submit the changes you made on GitHub!
-     *                When you submit it, go to the 'Actions' tab. You should
-     *                be able to see this exercise being autograded!
-     *
-     *                You can click on the ongoing action to see more details.
-     *                If the tests don't pass, look at the results and revise
-     *                accordingly.
-     */
 }
