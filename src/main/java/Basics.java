@@ -39,10 +39,7 @@ public class Basics {
          *    (Relevant reading: 1.1.3. Printing things)
          */
         System.out.println(7 + 5);
-
-        /* TODO (Task 1): Write a line of code below that prints the string
-         *                Hello World!
-         */
+        System.out.println("Hello World");
 
 
 
@@ -58,10 +55,7 @@ public class Basics {
          *    (Relevant reading: 1.2. Variables and Types)
          */
 
-        /*
-         * TODO (Task 2): Create a variable named my_variable and assign it the
-         *                value 100.
-         */
+        int my_variable = 100;
 
 
 
@@ -87,18 +81,9 @@ public class Basics {
          *    (Relevant reading: 1.8.2. for Loops)
          */
 
-        /*
-         * TODO (Task 3): Create a for-loop that loops from 10 to 0, printing
-         *                the following at each iteration:
-         *                Current count: #
-         *
-         * e.g. the end result should look like:
-         * Current count: 10
-         * Current count: 9
-         *     ...
-         * Current count: 1
-         * Current count: 0
-         */
+        for (int j = 10; j != -1; j--) {
+            System.out.println("Current count: " + j);
+        }
 
 
     }
@@ -141,8 +126,11 @@ public class Basics {
          *                you may use them if you wish.
          */
         StringBuilder ret = new StringBuilder();
+        String[] myArray = to_split.split(" ");
 
-        // Fill in the rest of the body here
+        for (String s : myArray) {
+            ret.append(s.charAt(0));
+        }
 
         return ret.toString();
     }
@@ -161,15 +149,19 @@ public class Basics {
      * @param arr    An array of integers
      * @return       The sum of all integers at odd indices in arr
      */
+
     public static int oddSum(int[] arr) {
         int current_sum = 0;
 
-        /* TODO (Task 5): Complete this method body using a for-loop.
-         *                You can find the length of an array by using the
-         *                .length attribute (e.g. arr.length)
-         *                You can index into arrays as we do in Python
-         *                (e.g. arr[i] gives you the item at index i).
-         */
+        if (arr.length < 2) {
+            return 0;
+        } else {
+            for (int j = 0; j < arr.length; j++) {
+                if (j % 2 != 0) {
+                    current_sum += arr[j];
+                }
+            }
+        }
 
         return current_sum;
     }
